@@ -66,11 +66,11 @@ namespace Calculator
             }
             else if (process == '/')
             {
-                result = num1 / num2;
+                result = DivisionCalculate(num1, num2);
             }
             else if (process == '*')
             {
-                result = num1 * num2;
+                result = MultiplicationCalculator(num1,num2);
             }
 
             return result;
@@ -83,24 +83,13 @@ namespace Calculator
         static double SubstractionCalculate(int num1, int num2) => num1 - num2;
 
 
-        static double? DivisionCalculate(int num1, int num2, char process)
+        static double DivisionCalculate(int num1, int num2)
         {
-            double? result = null;
-            if (process == '/')
-            {
-                result = num1 / num2;
-            }
-            return result;
+            return num1 / num2;
         }
-        static double? MultiplicationCalculator(int num1, int num2, char process)
+        static double MultiplicationCalculator(int num1, int num2)
         {
-            double? result = null;
-            if (process == '*')
-            {
-                result = num1 * num2;
-
-            }
-            return result;
+            return num1 * num2;
         }
 
     }
