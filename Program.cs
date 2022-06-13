@@ -58,11 +58,11 @@ namespace Calculator
             // Buraya girerse 3 koşulda doğru  
             if (process == '+')
             {
-                result = num1 + num2;
+                result = AdditionCalculate(num1, num2);
             }
             else if (process == '-')
             {
-                result = num1 - num2;
+                result = SubstractionCalculate(num1, num2);
             }
             else if (process == '/')
             {
@@ -76,37 +76,26 @@ namespace Calculator
             return result;
         }
 
-        static double? AdditionCalculate(int num1, int num2, char process)
+        static double AdditionCalculate(int num1, int num2)
         {
-            double? result = null;
-            if(process == '+')
-            {
-                result = num1 + num2;
-            }
-            return result;
+            return num1 + num2;
         }
-        static double? substractionCalculate(int num1, int num2, char process)
-        {
-            double? result = null; ;
-            if (process == '-')
-            {
-                result = num1 - num2;
-            }
-            return result;
-        }
+        static double SubstractionCalculate(int num1, int num2) => num1 - num2;
+
+
         static double? DivisionCalculate(int num1, int num2, char process)
         {
             double? result = null;
-            if(process == '/')
+            if (process == '/')
             {
                 result = num1 / num2;
             }
             return result;
         }
-        static double? MultiplicationCalculator(int num1 , int num2, char process)
+        static double? MultiplicationCalculator(int num1, int num2, char process)
         {
             double? result = null;
-            if(process =='*')
+            if (process == '*')
             {
                 result = num1 * num2;
 
